@@ -54,9 +54,17 @@ usersRoutes(app);
 server.listen(3202, '192.168.20.174' || 'localhost', function() {
  console.log('Aplicación de NodeJS ' + process.pid + ' inicio en el puerto ' + port);
 });
+
+/* RUTAS */
 app.get('/', (req, res) => {
  res.send('Ruta raiz del Backend');
 });
+
+app.get('/test', (req, res) => {
+
+  res.send('Estas en la ruta TEST');
+  
+  });
 
 //Error handler
 app.use((err, req, res, next) => {
